@@ -1,0 +1,791 @@
+.hero-section-container {
+  display: grid;
+  /* Может лучше флекс и видс 50% контейнера? */
+  grid-template-columns: 1fr 1fr;
+  height: 756px;
+
+  .hero-right-container {
+    margin-left: 20px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .hero-left-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+
+    .hero-description {
+      display: flex;
+      flex-direction: column;
+      margin-top: 204px;
+      width: 522px;
+      min-height: 291px;
+      /* Тут есть сомнение */
+      gap: 40px;
+
+      .full-cassette-awning {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.2px;
+        color: rgba(202, 13, 24, 1);
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .hero-section-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .get-pricing-hero-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(202, 13, 24, 1);
+        max-width: 256px;
+        width: 100%;
+        height: 48px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .why-zafino-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 500;
+        color: rgba(202, 13, 24, 1);
+        max-width: 256px;
+        width: 100%;
+        height: 48px;
+        background-color: rgba(255, 255, 255, 1);
+        border-color: rgba(202, 13, 24, 1);
+        border: 1px solid;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
+
+    /* .hero-section-thumbnails {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      width: 630px;
+      height: 179px;
+      margin-top: 90px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden; 
+      }
+    } мой вариант*/
+    /*
+.hero-section-thumbnails {
+  display: flex; Выстраиваем элементы в ряд
+  flex-direction: row; Горизонтальное направление
+  align-items: center; Центрируем изображения по вертикали
+  gap: 20px; Пространство между изображениями
+  width: 630px; Фиксированная ширина блока
+  height: 179px; Фиксированная высота блока
+  margin-top: 90px; Отступ сверху
+  margin-bottom: 0px; Убираем нижний отступ
+  margin-right: 0px;  Убираем правый отступ
+}
+
+.hero-section-thumbnails img {
+  max-width: 200px;  Ограничиваем максимальную ширину 
+  max-height: 120px;  Ограничиваем максимальную высоту 
+  object-fit: cover;  Обрезаем изображение, чтобы оно полностью заполняло контейнер 
+  width: auto;  Сохраняем пропорции ширины 
+  height: auto;  Сохраняем пропорции высоты 
+}
+ первый вариант ГПТ*/
+    .hero-section-thumbnails {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      max-width: 630px;
+      max-height: 179px;
+      overflow: hidden;
+      /* Чтобы изображения не выходили за границы */
+      margin-top: 50px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+    }
+
+    /* ВОТ МОЕ НЕ РАБОТАЛО - крайняя картинка была самая маленькая
+    .hero-section-thumbnails img {
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      .hero-section-thumbnails img:nth-child(1) {
+        width: 197px;
+        height: 179px;
+      }
+      
+      .hero-section-thumbnails img:nth-child(2) {
+        width: 196px;
+        height: 179px;
+      }
+      
+      .hero-section-thumbnails img:nth-child(3) {
+        width: 197px;
+        height: 179px;
+      }
+    } */
+    .hero-section-thumbnails img {
+      width: 100%;
+      /* Заполняем родителя */
+      height: 100%;
+      /* Заполняем родителя */
+      object-fit: cover;
+      /* Обрезаем лишнее, не растягивая */
+    }
+
+    .hero-section-thumbnails img:nth-child(1) {
+      width: 197px;
+      height: 179px;
+    }
+
+    .hero-section-thumbnails img:nth-child(2) {
+      width: 196px;
+      height: 179px;
+    }
+
+    .hero-section-thumbnails img:nth-child(3) {
+      width: 197px;
+      height: 179px;
+    }
+  }
+}
+
+.about-us-section-container {
+  height: 528px;
+  /*Падинг подлезает под hero section*/
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .about-us-section-image {
+    display: flex;
+    width: 906px;
+    height: 368px;
+
+    img {
+      height: 368px;
+      width: 906px;
+      object-fit: cover;
+    }
+  }
+
+  .about-us-section-description {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    width: 434px;
+    height: 368px;
+    margin-right: 80px;
+    margin-left: 20px;
+    gap: 40px;
+
+    .about-us-section-description-text {
+      color: rgba(60, 60, 60, 1);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: 434px;
+      min-height: 196px;
+      letter-spacing: normal;
+    }
+
+    .read-more-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(202, 13, 24, 1);
+      border: none;
+      border-radius: 8px;
+      max-width: 434px;
+      width: 434px;
+      height: 48px;
+      text-decoration: none;
+      /* Убираем подчеркивание */
+      cursor: pointer;
+    }
+
+    .read-more-button:hover {
+      background-color: rgba(172, 10, 20, 1);
+      /* Темнее при наведении */
+    }
+  }
+}
+
+.zafino-benefits-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(202, 13, 24, 1);
+  padding: 40px 80px;
+  height: 484px;
+  gap: 40px;
+
+  .h2-white {
+    color: rgba(245, 245, 245, 1); /* Перебил черный цвет h2 */
+  }
+
+  .zafino-benefits-blocks-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .zafino-benefits-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+    width: 240px;
+    height: 240px;
+    padding-top: 0px;
+    gap: 20px;
+    border-color: rgba(217, 217, 217, 1);
+    border-width: 1px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 25px 0px rgba(255, 255, 255, 0.25);
+
+    p {
+      text-align: center;
+      font-size: 20px;
+      width: 200px;
+      /* height: 22px; */
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+    svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.our-awnings-container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  gap: 40px;
+
+  ul {
+    display: flex;
+    padding: 0px;
+    gap: 20px;
+
+    .our-awning-block img {
+      /* Eсли эти стили вставить внутрь our-awning-block, то они не работают */
+      width: 100%;
+      height: 271px;
+      object-fit: cover;
+    }
+
+    .our-awning-block {
+      display: flex;
+      flex-direction: column;
+      width: 413.33px;
+      min-height: 469px;
+      /* Нужно подогнать под макет */
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(217, 217, 217, 1);
+      border-radius: 8px;
+      box-shadow: 0 4 25 0 rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      /* list-style: none; list-style: none; 
+      убирает стандартные маркеры (• или 1.) у <li>. 
+      В данном случае <ul> уже обнуляет padding, а 
+      стиль display: flex; у ul не дает маркерам отображаться. 
+      Если вдруг маркеры появились — можешь оставить 
+      list-style: none; внутри .our-awning-block.*/
+
+      /* img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        height: 271px;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+      } */
+
+      .our-awning-description-container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 20px;
+        gap: 20px;
+
+        h3 {
+          margin: 0px;
+          gap: 5px;
+        }
+
+        .description {
+          margin: 0px;
+          font-weight: 300;
+          color: rgba(113, 113, 113, 1);
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: normal;
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* ХЗ в чем ошибка */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .order-now-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          width: 137px;
+          height: 44px;
+          padding: 10px;
+          border-radius: 8px;
+          background: rgba(202, 13, 24, 1);
+          color: rgba(255, 255, 255, 1);
+          font-family: 'Inter';
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 17.6px;
+          text-decoration: none;
+          margin-left: auto;
+          /* Прижимает кнопку к правому краю */
+        }
+
+        .order-now-btn svg {
+          margin-left: 5px;
+          /* Отступ слева от стрелочки */
+        }
+      }
+    }
+
+
+  }
+
+}
+
+.select-fabric-section-container {
+  position: relative;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  height: 308px;
+  overflow: hidden;
+}
+
+.select-fabric-section-container::before
+
+/* ::before -псевдо єлемент для доп слоя для затемнения */
+  {
+  content: "";
+  /* Обязательное правило для псевдоэлемента */
+  position: absolute;
+  /* Абсолютное позиционирование внутри .select-fabric-section-container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Покрывает всю ширину контейнера */
+  height: 100%;
+  /* Покрывает всю высоту контейнера */
+  background: rgba(0, 0, 0, 0.5);
+  /* Полупрозрачный черный слой (затемнение) */
+  z-index: 1;
+  /* Слой затемнения выше фонового изображения, но ниже текста */
+}
+
+
+.select-fabric-section-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.select-fabric-section-container h2 {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(245, 245, 245, 1);
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  width: 993px;
+  height: 44px;
+  margin: 0;
+  text-align: center;
+  z-index: 2;
+  /* Поднимаем над затемнением */
+}
+
+.choose-your-fabric-btn {
+  position: absolute;
+  top: 164px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 64px;
+  border-radius: 8px;
+  background: rgba(202, 13, 24, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  /* Поднимаем над затемнением */
+}
+
+.get-a-quote-container {
+  display: flex; /* Делаем контейнер flex-контейнером */
+  justify-content: space-between; /* Размещаем элементы по сторонам */
+  align-items: stretch; /* Растягиваем по высоте */
+  max-width: 1440px; /* Максимальная ширина контейнера */
+  width: 100%;
+  margin: 0 auto; /* Центрируем секцию */
+  box-sizing: border-box;
+}
+
+.get-a-quote-left-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+  padding: 80px 40px 80px 80px;
+  background-color: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+
+.get-a-quote-left-title {
+  font-weight: 700;
+  font-size: 40px;
+  color: rgba(202, 13, 24, 1);
+  margin: 0;
+}
+
+.get-a-quote-left-description {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26.6px;
+  max-width: 600px;
+}
+
+.get-a-quote-image {
+  width: 100%;
+  max-width: 600px;
+  height: 271px;
+  object-fit: cover; /* Обрезает изображение, сохраняя его пропорции */
+}
+
+.get-a-quote-right-container {
+  background-color: rgba(245, 245, 245, 1);
+  width: 50%;
+  padding: 80px 80px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+/* Группа полей First Name и Last Name */
+.name-fields {
+  display: flex; /* Размещаем input'ы в строку */
+  gap: 20px; /* Отступ между полями */
+  width: 100%;
+}
+
+/* Делаем каждое поле в группе равномерно растягивающимся */
+.name-fields .input-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 1);
+}
+
+input {
+  border: 1px solid rgba(217, 217, 217, 1);
+  border-radius: 8px;
+  padding: 16px 20px;
+  background-color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Учитываем padding в общей ширине */
+}
+
+input::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(217, 217, 217, 1);
+}
+
+.quote-button {
+  background-color: rgba(202, 13, 24, 1);
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.quote-button:hover {
+  background-color: rgba(172, 10, 20, 1);
+}
+
+/* --- Адаптивность (мобильные устройства) --- */
+@media (max-width: 1024px) {
+  .get-a-quote-container {
+    flex-direction: column; /* Переводим контейнер в колонку */
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .get-a-quote-left-container,
+  .get-a-quote-right-container {
+    width: 100%;
+    max-width: 600px; /* Ограничиваем ширину формы */
+    padding: 40px;
+  }
+
+  .name-fields {
+    flex-direction: column; /* Столбец на мобильных */
+  }
+}
+
+.make-decision-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  height: auto;
+  padding: 80px 0;
+  gap: 40px;
+  background-color: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+
+.make-decision-title {
+  width: 1280px;
+  height: 44px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  margin: 0;
+}
+
+.make-decision-blocks {
+  display: flex;
+  width: 1280px;
+  height: auto;
+  gap: 35px;
+  justify-content: space-between;
+}
+
+.make-decision-block {
+  display: flex;
+  width: 622.5px;
+  height: 228px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(217, 217, 217, 1);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.decision-img {
+  width: 240px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.decision-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 382.5px;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.decision-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(113, 113, 113, 1);
+  font-weight: 400;
+}
+
+.decision-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 160px;
+}
+
+.name-surname {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 1);
+  margin: 0; /* Убраны отступы */
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.subscribe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1440px;
+  padding: 80px;
+  gap: 40px;
+  background-color: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+
+.subscribe-left {
+  width: 669px;
+  height: 104px;
+}
+
+.subscribe-left h2 {
+  text-align: left;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  color: rgba(0, 0, 0, 1);
+  margin: 0;
+}
+
+.subscribe-right {
+  width: 571px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.subscribe-input {
+  width: 414px;
+  height: 56px;
+  padding: 20px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  border-radius: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 16px;
+  font-family: 'Inter';
+  border-right:none;
+}
+.subscribe-input::placeholder {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17.6px;
+  letter-spacing: 0%;
+  color: rgba(168, 167, 170, 1);
+}
+
+.subscribe-button {
+  width: 157px;
+  height: 56px;
+  background-color: rgba(202, 13, 24, 1);
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(217, 217, 217, 1);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left:none;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26.4px;
+  margin-left:-5px;
+  cursor: pointer;
+}
+
+.subscribe-text {
+  width: 571px;
+  height: 18px;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.6px;
+  color: rgba(0, 0, 0, 1);
+  margin-top: 10px;
+}

@@ -1,0 +1,145 @@
+.upper-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: row; */
+  height: 80px;
+  background-color: rgba(245, 245, 245, 1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 80px;
+  z-index: 100;
+  box-sizing: border-box;
+
+  .navbar-logo {
+    font-weight: 800;
+    font-size: 24px;
+    color: rgba(202, 13, 24, 1);
+    /* display: flex;
+    align-items: center;
+    height: 100%; */
+  }
+
+  .navbar-tabs {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 20px;
+    /* position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%; */
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* height: 100%; */
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    padding: 10px;
+    background-color: transparent;
+    /* ! */
+  }
+
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+
+    .dropdown-toggle svg {
+      transition: transform 0.2s ease;
+    }
+
+    .nav-item.open .dropdown-toggle svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    /* Не уверен так как нет макета */
+    min-width: 150px;
+    list-style: none;
+    border: 1px solid #ccc;
+    /* Не уверен так как нет макета */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  /* Тут не понял как дисплей блок работает, но оставил GPT */
+  .nav-item.open .dropdown {
+    display: block;
+  }
+
+  /* Dropdown item styling */
+  .dropdown li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown li:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+
+  .dropdown a:hover {
+    background-color: #f1f1f1;
+    /* Не уверен так как нет макета */
+  }
+
+  .get-pricing-header-button {
+    background-color: rgba(202, 13, 24, 1);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+
+    .get-pricing-header-button:hover {
+      background-color: rgba(172, 10, 20, 1);
+    }
+  }
+}
+
+.lower-header-container {
+  height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(245, 245, 245, 1);
+  background-color: rgba(202, 13, 24, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  left: 0;
+  z-index: 90;
+}
