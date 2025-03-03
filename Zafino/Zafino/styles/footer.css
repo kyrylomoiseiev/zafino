@@ -1,0 +1,96 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 1440px;
+  gap: 40px;
+  padding: 40px 80px;
+  background-color: rgba(245, 245, 245, 1);
+  box-sizing: border-box;
+}
+
+.main-info-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+footer p {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26.4px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  margin: 0;
+}
+
+.about-zafino-small-text {
+  display: flex;
+  flex-direction: column;
+  width: 413px;
+  height: 173px;
+  gap: 20px;
+}
+
+.logo {
+  font-family: 'Inter';
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0;
+  color: rgba(202, 13, 24, 1);
+}
+
+.footer-small-text {
+  width: 305px;
+  height: 105px;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 1);
+}
+
+.our-company-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 305px;
+  height: 100%;
+}
+
+.products-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 305px;
+}
+
+.follow-us-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 197px;
+  gap: 20px;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  gap: 10px;
+}
+
+.property-text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
